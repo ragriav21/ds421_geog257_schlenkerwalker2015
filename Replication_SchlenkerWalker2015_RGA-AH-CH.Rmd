@@ -1,0 +1,54 @@
+---
+title: "Replication for Schlenker & Walker (2015)"
+author: "Rafael Grillo Avila, Chester Harvey, Andy Hultgren"
+date: "September 25, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Executive Summary
+
+## Objectives
+
+* Replicate the Matlab figures from the main text. In particular Figure 3, given its intuitive and informative design.
+
+* See if Stata and Matlab code can be executed in R.
+
+## Progress and Stumbling Blocks
+
+Multiple team members were able to successfully replicate Figure 2. Only one of us was able to successfully replicate Figure 3, perhaps due to hardware (memory?) constraints. Unsuccessful attempts to replicate Figure 3 failed on errors related to matrix size issues.
+
+In addition, none of us were able to replicate Figure 1, as the underlying shapefile was not included in the replication code or data (we searched).
+
+## Results
+
+One of the panels from Figure 3 is posted below, as a demonstration of our replication output coming directly from the STATA and MATLAB scripts.
+
+![](C:\Users\acer\Documents\UC Berkeley\2018-2019\Fall 2018\GEOG 257 - Interdisciplinary Research Methods\ds421_geog257_schlenkerwalker2015\Figure3.png)
+
+Note: This is the 4th panel of Figure 3 - the marginal effect of taxi time on carbon monoxide (CO) levels evaluated at the 66.5th percentile of windspeed (3 m/s). The units are parts-per-billion per 1,000 minutes of taxi time. Interestingly, at this windspeed, pollution effects upwind are estimated to be larger than downwind effects.
+
+
+A few general notes follow:
+
+ * The readme file was concise, informative, and accurate. We appreciated that it gave us enough of an overview to orient us to the layout of the replication data and code, without being overwhelming.
+ * While the entire project could not be replicated with a “single button,” we did not find this to be an issue in our replication. Rather, we did find that the organization of the replication code was easy to navigate.
+ * Commenting in the replication code was perhaps a bit sparse, but sufficient. For example, a brief (but focused) read of the Figure 3 code was enough to understand its functionality.
+ * Matlab files did not have headers describing their contents. Rather, the code appears to rely on the captions in the actual paper for this information. A better practice might be to include key descriptive information as a comment block, however as previously mentioned the code was reasonably readable.
+ * The shapefiles were not included in the replication code, and so figures requiring them could not be replicated.
+ *For two group members (Andy & Rafael), the native Windows 7 and 10 software could not extract the .zip file contained within the downloaded .zip file (<MS17397dataAndCode.zip> inside of <rdv043_Supplementary_Data.zip>). However, the freeware program 7_zip was able to complete the extraction.
+
+
+
+# Code
+
+```{r Load Packages}
+library(tidyverse)
+
+
+
+
+```
